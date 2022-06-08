@@ -36,7 +36,7 @@ public class SimpleBooks {
 	// 3. Customer is able to select books by their type
 	@Test
 	public void fictionBooks() {
-		given().queryParam("type", "fiction")// URI/?available=true
+		given().queryParam("type", "fiction")// URI/?type=fiction
 				.when().get("/books").then().log().all().assertThat().statusCode(200);
 	}
 
