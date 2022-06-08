@@ -42,7 +42,7 @@ public class SimpleBooks {
 
 	@Test
 	public void nonFictionBooks() {
-		given().queryParam("type", "non-fiction")// URI/?available=true
+		given().queryParam("type", "non-fiction")// URI/?type=non-fiction
 				.when().get("/books").then().log().all().assertThat().statusCode(200);
 	}
 
